@@ -1,68 +1,52 @@
 body {
     overflow: hidden;
-    font-family: Consolas,monaco,monospace; 
-    background: linear-gradient(to right, #D1347B 30%, #093573 95%); /* Adiciona um gradiente de cor */
+    font-family: Consolas, Monaco, monospace;
+    background: linear-gradient(to right, #D1347B 30%, #093573 95%);
 }
 
-.navbar{
+.navbar {
     display: flex;
     justify-content: center;
-    justify-items: center;
+    align-items: center;
     background-color: rgba(9, 53, 115, 0.5);
 }
 
-.icon-logo-img, img{
+.icon-logo-img, img {
     margin-top: 1%;
     margin-bottom: 1%;
     margin-left: 1%;
     display: inline-block;
-   
 }
 
-.container1-quadrado {
+.container1-quadrado, .container2-quadrado, .container3-quadrado {
     display: flex;
-    width: 100px; 
-    height: 100px;
-    margin-bottom: 45px;
-    margin-top: 5%;
-}
-
-.container2-quadrado {
-    display: flex;
-    width: 100px; 
-    height: 100px;
-    margin-bottom: 45px;
-}
-
-.container3-quadrado {
-    display: flex;
-    width: 100px; 
-    height: 100px;
-    margin-bottom: 3%;
-}
-
-.container{
-   display: inline-block;
-   padding: 10px;   
-}
-
-.quadrado {
     justify-content: center;
-    align-items: flex-start; 
+}
+
+.container1-quadrado .quadrado,
+.container2-quadrado .quadrado,
+.container3-quadrado .quadrado {
     width: 100px;
     height: 100px;
     background-color: rgba(9, 53, 115, 0.5);
-    display: inline-block;
-    padding: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 60px;
     margin: 5px;
     cursor: pointer;
     color: rgba(9, 53, 115, 0.0);
-    flex-wrap: wrap;
 }
 
-.container-pai{
-    display: flex-end;
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.container-pai {
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -70,42 +54,39 @@ body {
 }
 
 .container-jogadores {
-    order: 1;
     display: flex;
-    margin-top: -8%;
-    justify-content: flex-end; 
+    justify-content: center;
     align-items: center;
-    margin-right: 10%;
+    margin-top: -8%;
+    margin-bottom: 20px;
 }
 
-.container-info-jogadores{
-    order: 2;
+.container-info-jogadores {
     display: inline-block;
-    
     padding: 50px;
     border: 1px solid white;
     border-radius: 2%;
-    list-style-type: none;
-
-    margin-left: 65%;
-    margin-right: auto;
-    width: 20%;
-
     margin-top: -8%;
-    
+    color: white;
+    width: 20%;
 }
-
 
 .jogador1, 
 .jogador2, 
-.vencedor{
+.vencedor {
     color: white;
     font-size: 20px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
+.button-class {
+    text-align: center;
+}
 
-button{
+button {
     background-color: transparent;
     font-size: 20px;
     margin-top: 5%;
@@ -114,24 +95,17 @@ button{
     cursor: pointer;
     color: white;
     border: 1px solid white;
+    border-radius: 5px;
 }
 
-.button-class{
-    border-radius: 10%;
-}
-
-
-
-.jogador{
+.jogador {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     margin-top: -20%;
     padding: 10px;
     margin-right: 80px;
     margin-left: 80px;
-    margin-bottom: 15%;
 }
 
 .jogador-icon {
@@ -139,11 +113,12 @@ button{
     height: 150px;
 }
 
-p{
+p {
     margin-top: 30px;
+    text-align: center;
 }
 
-.tituloTxt{
+.tituloTxt {
     display: flex;
     justify-content: center;
     align-items: center;
